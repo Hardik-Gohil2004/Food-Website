@@ -1,0 +1,566 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+section{
+    width: 100%;
+    height: 100vh;
+}
+section nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    right: 0;
+    left: 0;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    z-index: 1000;    
+}
+section nav .logo img{
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    margin: 5px 0;
+    
+
+}
+section nav ul{
+    list-style-type: none;
+
+}
+section nav ul li{
+    display: inline-block;
+    margin: 0 15px;
+}
+section nav ul li a{
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 20px;
+}
+section nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color:#fac031;
+    display: block;
+    transition: 0.2s linear;
+}
+section nav ul li a:hover::after{
+    width:100%;
+}
+section nav .icon{
+    font-size: 25px;
+    color: black;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+section nav .icon i:hover{
+    color: #fac031;
+}
+section .main{
+    display: flex;
+    align-items:center;
+    justify-content: space-around;
+    position: relative;
+    top: 200px;
+}
+section .main .men_text h1{
+    font-size: 60px;
+    position: relative;
+    top: -120px;
+    left: 20px;
+}
+section .main .men_text h1 span{
+    margin-left: 15px;
+    color: #fac031;
+    font-family: mv boli;
+    line-height: 22px;
+    font-size: 70px;
+}
+section .main .main_image img{
+    width: 600px;
+    position: relative;
+    left: 70px;
+}
+section p{
+    width: 650px;
+    text-align: justify;
+    position: relative;
+    left: 90px;
+    bottom: 60px;
+    line-height: 22px;
+}
+section .main_btn{
+    background-color: #fac031;
+    position: relative;
+    left: 90px;
+    bottom: 15px;
+    width: 130px;
+    cursor: pointer;
+    padding: 12px 15px;
+}
+section .main_btn a{
+    color: #fff;
+    margin-right: 5px;
+    text-decoration: none;
+}
+section .main_btn i{
+    color: #fff;
+    transition: 0.3s;
+    display: inline;
+}
+
+
+/*about*/
+.about{
+    width: 100%;
+    height: 100vh;
+    padding: 40px 0;
+}
+.about .about_main{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.about .about_main .image img{
+    width: 800px;
+    height: 600px;
+    position: relative;
+    top: 60px;
+    left:-10px;
+}
+.about .about_main .about_text h1 span{
+    color: #fac031;
+    margin-right: 15px;
+    font-family: mv boli;
+}
+.about .about_main .about_text h1{
+    font-size: 55px;
+    position: relative;
+    bottom: 20px;
+}
+.about .about_main .about_text h3{
+    font-size: 25px;
+    margin: 0 0 40px 0;
+}
+.about .about_main .about_text p{
+    width: 500px;
+    text-align: justify;
+    margin-right: 30px;
+    line-height: 22px;
+}
+.about .about_btn{
+    background-color: #fac031;
+    padding: 12px 25px;
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+    left:61%;
+    bottom: 100px;
+}
+/*menu*/
+
+.menu{
+    width: 100%;
+    padding: 70px 0;
+    top:-30px;
+}
+.menu h1{
+    font-size: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+
+}
+.menu h1 span{
+    color: #fac031;
+    margin-left: 15px;
+    font-family: mv boli;
+}
+.menu h1 span::after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: #fac031;
+    display: block;
+    position: relative;
+    bottom: 15px;
+}
+.menu .menu_box{
+    width: 95%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap:15px;
+}
+.menu .menu_box .menu_card{
+    width: 325px;
+    height: 480px;
+    padding-top:10px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+.menu .menu_box .menu_card .menu_image {
+      width: 300px;
+      height: 245px;
+      margin: 0 auto;
+      overflow: hidden;
+}
+.menu .menu_box .menu_card .menu_image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: 0.3s;
+}
+.menu .menu_box .menu_card .menu_image:hover img{
+    transform: scale(1.1);
+}
+.menu .menu_box .menu_card .small_card{
+    width: 45px;
+    height: 45px;
+    float: right;
+    position: relative;
+    top: -240px;
+    right: -8px;
+    opacity: 0;
+    border-radius: 7px;
+    transition: 0.3s;
+}
+.menu .menu_box .menu_card:hover .small_card{
+    top: -240px;
+    opacity: 1;
+}
+.menu .menu_box .menu_card .card_info h2{
+    width: 60%;
+    text-align: center;
+    margin: 10px auto 10px auto;
+    font-size: 25px;
+    color: #fac031;
+}
+.menu .menu_box .menu_card .card_info p{
+    text-align: center;
+    margin-top: 8px;
+    line-height: 21px;
+}
+.menu .menu_box .menu_card h3{
+    text-align: center;
+    margin-top: 10px;
+}
+.menu .menu_box .menu_card .menu_icon{
+    color: #fac031;
+    text-align: center;
+    margin: 10px 0 10px 0;
+}
+.menu .menu_box .menu_card .menu_btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #fff;
+    background-color:black;
+    padding: 8px 10px;
+    margin: 0 80px;
+    transition: 0.3s;
+}
+
+/*Our Speciality*/
+.speciality{
+    width: 100%;
+    padding: 70px 0;
+}
+.speciality h1{
+    font-size: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.speciality h1 span{
+    margin-left: 15px;
+    color: #fac031;
+    font-family: mv boli;
+}
+.speciality h1 span::after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: #fac031;
+    display: block;
+    position: relative;
+    bottom: 15px;
+}
+.speciality .image_box{
+    width: 95%;
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-gap: 10px;;
+}
+.speciality .image_box .image_gallery{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+.speciality .image_box .image_gallery img{
+    width: 100%;
+    transition: 0.3s;
+}
+.speciality .image_box .image_gallery:hover img{
+    opacity: 0.4;
+}
+.speciality .image_box .image_gallery h3{
+    position: absolute;
+    font-size: 35px;
+    margin-bottom: 130px;
+    color: #fac031;
+    font-family: polo;
+    z-index: 5;
+    opacity: 0;
+    transition: 0.3s;
+}
+.speciality .image_box .image_gallery:hover h3{
+    opacity: 1;
+}
+.speciality .image_box .image_gallery p{
+    position: absolute;
+    width: 400px;
+    margin-top: 30px;
+    text-align: center;
+    color: #fff;
+    line-height: 22px;
+    opacity: 0;
+    z-index: 5;
+    transition: 0.3s;
+}
+.speciality .image_box .image_gallery:hover p{
+    opacity: 1;
+}
+.speciality .image_box .image_gallery .gallery_btn{
+    position: absolute;
+    margin-top: 180px;
+    color: black;
+    background-color: #fac031;
+    padding: 7px 25px;
+    text-decoration: none;
+    opacity: 0;
+    transform: translateY(45px);
+    z-index: 5;
+    transition: 0.3s;
+}
+.speciality .image_box .image_gallery:hover .gallery_btn{
+    opacity: 1;
+    transform: translateY(0);
+}
+/*order*/
+.order{
+    width: 100%;
+    height: 100vh;
+    padding: 70px 0;
+}
+.order h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-size: 55px;
+}
+.order h1 span{
+    color: #fac031;
+    margin-right: 15px;
+    font-family: mv boli;
+}
+.order h1 span::after{
+     content: '';
+    width: 100%;
+    height: 2px;
+    background-color: #fac031;
+    display: block;
+    position: relative;
+    bottom: 15px;
+}
+.order .order_main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.order .order_main .order_img img{
+    width:600px;
+
+}
+.order .order_main form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0 10px;
+}
+.order .order_main form .input p{
+  line-height: 25px;
+}
+.order .order_main form .input{
+    margin: 5px;
+}
+.order .order_main form .input input{
+    width: 300px;
+    height: 35px;
+    padding: 0 10px;
+    border: 2px solid #cccc;
+    background-color: #eee;
+    outline: none;
+    border-radius: 3px;
+}
+.order .order_main form .input input:focus{
+    border: 2px solid #fac031;
+}
+.order .order_main form .btn_order{
+    padding: 10px 0;
+    background-color:#fac031;
+    color: white;
+    width:40%;
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: none;
+
+}
+
+
+/*team*/
+.team{
+    width: 100%;
+    height: 90vh;
+    
+}
+.team h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-size: 55px;
+    margin-bottom: 30px;
+
+}
+.team h1 span{
+    color: #fac031;
+    margin-right: 15px;
+    font-family: mv boli;
+}
+.team h1 span::after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: #fac031;
+    display: block;
+    position: relative;
+    bottom: 15px;
+}
+.team .team_box{
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top:13%
+}
+.team .team_box .profile{
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    margin: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0 0 8px rgba(0,0,0,0.5);
+    transition: 0.4s;
+}
+.team .team_box .profile:hover{
+    border-radius: 20px;
+    height: 320px;
+}
+
+.team .team_box .profile img{
+  width:250px;
+  height: 250px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 8px rgba(0,0,0,0.5);
+  z-index: 2;
+  transition: 0.4s;
+
+}
+.team .team_box .profile:hover img{
+    border-radius: 20px;
+    margin-top: -230px;
+}
+.team .team_box .profile .info{
+    position: absolute;
+    text-align: center;
+    top: 25%;
+    transition: 0.4s;
+}
+.team .team_box .profile:hover .info{
+    top:60%;
+}
+.team .team_box .profile .info .name{
+    color: #fac031;
+    margin-bottom: 15px;
+}
+.team .team_box .profile .info .bio{
+    width: 70%;
+    text-align: center;
+    margin: 0 auto 10px auto;
+}
+.team .team_box .profile .info .team_icon{
+    margin: 10px 5px 5px 0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.team .team_box .profile .info .team_icon i:hover{
+color: #fac031;
+}
+/*footer*/
+footer{
+    width: 100%;
+    padding: 30px 0 0 20px;
+    background-color: #eeeeee;
+}
+footer .footer_main{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+footer .footer_main .footer_tag{
+    text-align: center;
+}
+
+footer .footer_main .footer_tag h2{
+    color:#000;
+    margin-bottom: 25px;
+    font-size: 30px;
+
+}
+footer .footer_main .footer_tag p{
+    margin: 10px 0;
+}
+footer .footer_main .footer_tag i{
+    margin: 0 5px;
+    cursor: pointer;
+}
+footer .end{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+footer .end span{
+    color: #fac031;
+    margin-left: 10px;
+}
