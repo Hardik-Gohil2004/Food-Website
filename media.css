@@ -1,0 +1,39 @@
+@media(max-width:767px) 
+{ 
+    body{
+        padding-top: 120px;
+    }
+    nav .logo{
+        margin-left: 10px;
+    }
+    nav .container ul li a{
+    margin-top: 5px;
+    margin-left: 10px;
+}
+   section .container h1{
+    font-size: 35px;
+    position: relative;
+}
+section .container h1 span{
+    margin-left: 15px;
+    color: #ff4800;
+    font-family: mv boli;
+    line-height: 22px;
+    font-size:40px;
+}
+section .about img{
+    display: none;
+}
+.order img{
+width: 300px;
+}
+.order form{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 0 10px;
+}
+footer .footer_main{
+    display:grid;
+    grid-template-columns: 1fr
+}
+}
